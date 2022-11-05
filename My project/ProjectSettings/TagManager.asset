@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Platos
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Paredes
+    uniqueID: 1697524407
+    locked: 0
+  - name: Piso
+    uniqueID: 1100950007
+    locked: 0
+  - name: Detalles techo
+    uniqueID: 251608831
+    locked: 0
+  - name: Muebles
+    uniqueID: 1111020485
+    locked: 0
+  - name: Personaje
+    uniqueID: 3196788265
+    locked: 0
