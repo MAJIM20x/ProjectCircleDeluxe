@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class movimientoJugador : MonoBehaviour
 {
-    [SerializeField]private float speed = 3f;
-    [SerializeField]private bool isPlauer1;
+    [SerializeField]private float walk = 3f;
+    [SerializeField]private float run = 5f;
+    [SerializeField]private bool isPlayer1;
     [SerializeField]private bool isPlayer2;
     [SerializeField]private bool isPlayer3;
     [SerializeField]private bool isPlayer4;
@@ -15,21 +16,24 @@ public class movimientoJugador : MonoBehaviour
     private Animator playerAnimator;
     
     
+    
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        
     }
 
     
     void Update()
     {   
 
-        if(isPlauer1){
+        if(isPlayer1){
 
             float moveX = Input.GetAxisRaw("Horizontal");
             float moveY = Input.GetAxisRaw("Vertical");
             moveInput = new Vector2(moveX, moveY).normalized;
+            
 
             playerAnimator.SetFloat("Horizontal", moveX);
             playerAnimator.SetFloat("Vertical", moveY);
@@ -81,7 +85,13 @@ public class movimientoJugador : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playerRb.MovePosition(playerRb.position + moveInput * speed * Time.fixedDeltaTime);
+        playerRb.MovePosition(playerRb.position + moveInput * walk * Time.fixedDeltaTime);
+
+        if(Input.GetKey(KeyCode.Q))
+        
+        {
+            playerRb.MovePosition(playerRb.position + moveInput * run * Time.fixedDeltaTime);
+        }
 
     }
 }
